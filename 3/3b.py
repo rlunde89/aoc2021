@@ -14,7 +14,7 @@ def return_sub_frame(bit_to_filter: int, input_frame: pd.DataFrame) -> float:
         out_frame = out_frame[out_frame[col] == arg_val]
 
         if len(out_frame) == 1:
-            return int(''.join([str(val) for val in out_frame.mean().round(0).astype(int).values]), 2)
+            return int(''.join([str(val) for val in out_frame.astype(int).values]), 2)
 
 
 
